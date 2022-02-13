@@ -9,16 +9,14 @@ def executePhoto():
     original = cv.imread(Constants.MPRPhoto)
     img = original[0:1080, 0:1920]
     blank = np.zeros(img.shape, dtype = 'uint8')
-    dst = cv.fastNlMeansDenoisingColored(img ,None, 20, 20, 11,29)
+    # dst = cv.fastNlMeansDenoisingColored(img ,None, 20, 20, 11,29)
     lower_green = np.array([230, 230, 230])
     upper_green = np.array([255, 255, 255])
 
-    mask = cv.inRange(dst , lower_green, upper_green)  
+    mask = cv.inRange(img , lower_green, upper_green)  
     res = cv.bitwise_and( img, img, mask= mask)  
 
-
     cv.imshow('mask', res)
-    print(img)
 
     blockSize = 2
     apertureSize = 3
