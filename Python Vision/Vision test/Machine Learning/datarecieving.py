@@ -28,6 +28,6 @@ while(True):
         cv.imwrite("Machine Learning\Positive\{}.jpg".format(loop_time), frame)
     #When d is pressed, it saves a screenshot to the negative folder
     elif key == ord('d'):
-        cv.imwrite("Machine Learning\Negative\{}.jpg".format(loop_time), frame)
+        cv.imwrite("Machine Learning\\Negative\\{}.jpg".format(loop_time), frame)
 
 print('Done.')
