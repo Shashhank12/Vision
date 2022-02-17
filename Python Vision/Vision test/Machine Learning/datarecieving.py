@@ -23,7 +23,7 @@ while(True):
     loop_time = time()
     #Sets key to waitkey
     cv.imwrite("Machine Learning\Positive\{}.jpg".format(loop_time), mask)
-    key = cv.waitKey(10)
+    key = cv.waitKey(200)
     #When q is pressed, window closes
     if key == ord('q'):
         cv.destroyAllWindows
