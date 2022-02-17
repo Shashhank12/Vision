@@ -10,7 +10,7 @@ def executePhoto():
     img = original[0:1080, 0:1920]
     blank = np.zeros(img.shape, dtype = 'uint8')
     # dst = cv.fastNlMeansDenoisingColored(img ,None, 20, 20, 11,29)
-    lower_green = np.array([230, 230, 230])
+    lower_green = np.array([245, 245, 245])
     upper_green = np.array([255, 255, 255])
 
     mask = cv.inRange(img , lower_green, upper_green)  
@@ -31,7 +31,7 @@ def executePhoto():
 def executeCamera():
     capture = cv.VideoCapture(Constants.port)
 
-    lower_green = np.array([200,200,200])
+    lower_green = np.array([245,245,245])
     upper_green = np.array([255,255,255])
 
     while True:
